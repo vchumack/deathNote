@@ -28,7 +28,7 @@ export class App extends Component {
 
   setValueSubmitForm = data => {
     if (this.checkAddingContacts(data.name)) {
-      Report.info(`${data.name} is already in contacts`);
+      Report.info(`${data.name} is already in contacts!`);
       return;
     }
 
