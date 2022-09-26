@@ -63,12 +63,12 @@ export class App extends Component {
     const parsedContacts = JSON.parse(localStorage.getItem('myContactList'));
     console.log('parsedContacts', parsedContacts);
 
-    if (parsedContacts) {
+    if (parsedContacts && parsedContacts.length > 0) {
       this.setState({ contacts: parsedContacts });
     }
-    
+
   }
-// вызывается после каждого обновления
+  // вызывается после каждого обновления
   componentDidUpdate(_, prevState) {
     console.log('componentDidUpdate');
     // console.log(prevProps);
@@ -77,7 +77,7 @@ export class App extends Component {
 
     // проверка обязательна на обновления стейта, иначе зациклим компонент
     const { contacts } = this.state;
-    
+
     if (contacts !== prevState.contacts) {
       console.log('обновилось поле');
 
@@ -106,10 +106,10 @@ export class App extends Component {
         boxShadow='rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;'
       >
         <TitlePhonebook>Phonebook</TitlePhonebook>
-        <ContactForm submitForm={this.setValueSubmitForm } />
+        <ContactForm submitForm={this.setValueSubmitForm} />
         <SecondTitlePhonebook>Contacts</SecondTitlePhonebook>
         <Filter changeInput={this.handleChangeInputFilter} />
-        <ContactList contacts={visibleContacts} deleteBtn={ this.handleDeleteBtnClick} />
+        <ContactList contacts={visibleContacts} deleteBtn={this.handleDeleteBtnClick} />
       </Box>
     );
   }
