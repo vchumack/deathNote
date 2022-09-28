@@ -16,7 +16,7 @@ const initialContacts = [
 export function App() {
 	const parsedContacts = JSON.parse(localStorage.getItem('myContactList'));
 	const [contacts, setContacts] = useState(() =>
-		parsedContacts && parsedContacts.length > 0
+		parsedContacts.length > 0
 			? parsedContacts
 			: initialContacts
 	);
