@@ -16,7 +16,7 @@ const initialContacts = [
 export function App() {
 	const parsedContacts = JSON.parse(localStorage.getItem('myContactList'));
 	const [contacts, setContacts] = useState(() =>
-		parsedContacts.length > 0
+		parsedContacts?.length > 0 
 			? parsedContacts
 			: initialContacts
 	);
@@ -67,6 +67,7 @@ export function App() {
 		setContacts(contacts.filter(el => el.id !== id));
 	};
 
+	//!почему здесь надо через переменную и можно ли просто передать в пропе вызов функции
 	const visibleContacts = filterContacts();
 
 	return (
