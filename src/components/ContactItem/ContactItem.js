@@ -16,7 +16,7 @@ export const ContactItem = ({ id, name, number, deleteBtn }) => {
 					deleteBtn(id);
 					setIsLoadingLocal(true);
 				}}
-				onLoad={() => isLoadingLocal && isLoading}
+				// onLoad={() => isLoadingLocal && isLoading}
 			>
 				{isLoadingLocal && isLoading && '...'}
 			</BtnDelete>
