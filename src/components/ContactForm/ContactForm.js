@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { nanoid } from 'nanoid';
+
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import 'yup-phone';
@@ -12,6 +12,7 @@ import {
 	Button,
 	BtnBox,
 } from './ContactForm.styled';
+import { useSelector } from 'react-redux';
 
 const FormError = ({ name }) => {
 	return (
@@ -28,7 +29,7 @@ const schema = yup.object().shape({
 });
 
 export function ContactForm({ submitForm }) {
-	const id = nanoid();
+	const isLoading = useSelector(state => state.contacts.isLoading);
 
 	const initialValues = {
 		name: '',
@@ -37,7 +38,6 @@ export function ContactForm({ submitForm }) {
 
 	const handleSubmit = ({ name, number }, { resetForm }) => {
 		const newContact = {
-			id,
 			name,
 			number,
 		};
@@ -75,7 +75,9 @@ export function ContactForm({ submitForm }) {
 					<FormError name="number" title="title" />
 				</Label>
 				<BtnBox>
-					<Button type="submit">Add contact</Button>
+					<Button type="submit" disabled={isLoading}>
+						{isLoading ? '...Adding' : 'Add contact'}
+					</Button>
 				</BtnBox>
 			</FormContacts>
 		</Formik>

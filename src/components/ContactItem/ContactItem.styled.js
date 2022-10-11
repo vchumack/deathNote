@@ -80,7 +80,13 @@ export const BtnDelete = styled.button`
 		position: absolute;
 		top: 8px;
 		left: -2px;
-		display: block;
+		display: ${props => {
+			if (props.onLoad) {
+				return 'none';
+			} else {
+				return 'block';
+			}
+		}};
 		width: 24px;
 		height: 3px;
 		background: #b292d3;

@@ -6,13 +6,13 @@ import { UlContactList } from './ContactList.styled';
 export const ContactList = ({ contacts, deleteBtn }) => {
 	return (
 		<UlContactList>
-			{contacts.map(({ id, name, number }) => {
+			{contacts.map(({ id, name, phone }) => {
 				return (
 					<ContactItem
 						key={id}
 						id={id}
 						name={name}
-						number={number}
+						number={phone}
 						deleteBtn={deleteBtn}
 					/>
 				);
@@ -24,8 +24,10 @@ export const ContactList = ({ contacts, deleteBtn }) => {
 ContactList.propTypes = {
 	contacts: PropTypes.arrayOf(
 		PropTypes.shape({
+			id: PropTypes.string.isRequired,
 			name: PropTypes.string.isRequired,
-			number: PropTypes.string.isRequired,
+			phone: PropTypes.string.isRequired,
+			createdAt: PropTypes.string.isRequired,
 		})
 	),
 	deleteBtn: PropTypes.func.isRequired,

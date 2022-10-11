@@ -6,32 +6,21 @@ import { Filter } from './Filter';
 import { TitlePhonebook, SecondTitlePhonebook } from './App.styled';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContacts, changeFilter, deleteContacts } from "../redux/contactsSlice";
-
-// const initialContacts = [
-// 	{ id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
-// 	{ id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
-// 	{ id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
-// 	{ id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
-// ];
+import { changeFilter } from "../redux/contactsSlice";
+import {fetchContacts, addContact, deleteContact} from '../redux/operations'
+import { useEffect } from 'react';
 
 export function App() {
 	const state = useSelector(state => state);
 	const dispatch = useDispatch();
 
+	if (state.contacts.error) {
+		Report.failure(`Error. Pls try again`);
+	}
 
-
-	// const parsedContacts = JSON.parse(localStorage.getItem('myContactList'));
-
-	// const [contacts, setContacts] = useState(() =>
-	// 	parsedContacts?.length > 0 ? parsedContacts : initialContacts
-	// );
-//   const [filter, setFilter] = useState('');
-
-	// здесь вытаскиваем данные, если они есть, благодаря установке зависимости, аналог componentDidUpdate
-	// useEffect(() => {
-	// 	localStorage.setItem('myContactList', JSON.stringify(contacts));
-	// }, [contacts]);
+	useEffect(() => {
+		dispatch(fetchContacts())
+	}, [dispatch])
 
 	const setValueSubmitForm = data => {
 		if (checkAddingContacts(data.name)) {
@@ -39,34 +28,23 @@ export function App() {
 			return;
 		}
 
-		dispatch(addContacts(data))
-		// setContacts(prevContacts => [...prevContacts, data]);
+		dispatch(addContact(data));
+		
 	};
 
-	// const handleChangeInputFilter = e => {
-	// 	const { value } = e.currentTarget;
-
-	// 	dispatch(changeFilter(value));
-	// 	// setFilter(value);
-	// };
 
 	const checkAddingContacts = name => {
-		return state.contacts.find(el => el.name.toLowerCase() === name.toLowerCase());
+		return state.contacts.items.find(el => el.name.toLowerCase() === name.toLowerCase());
 	};
 
 	const filterContacts = () => {
 		const lowerFilter = state.filter.toLowerCase();
-		return state.contacts.filter(el => {
+		return state.contacts.items.filter(el => {
 			return el.name.toLowerCase().includes(lowerFilter);
 		});
 	};
 
-	// const handleDeleteBtnClick = id => {
-	// 	setContacts(contacts.filter(el => el.id !== id));
-		
-	// };
 
-	//!почему здесь надо через переменную и можно ли просто передать в пропе вызов функции
 	const visibleContacts = filterContacts();
 
 	return (
@@ -90,7 +68,7 @@ export function App() {
 			<Filter changeInput={(e) => dispatch(changeFilter(e.currentTarget.value))} />
 			<ContactList
 				contacts={visibleContacts}
-				deleteBtn={(id) => dispatch(deleteContacts(id))}
+				deleteBtn={(id) => dispatch(deleteContact(id))}
 			/>
 		</Box>
 	);
