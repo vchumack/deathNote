@@ -12,7 +12,7 @@ export const ContactList = ({ contacts, deleteBtn }) => {
 						key={id}
 						id={id}
 						name={name}
-						number={phone}
+						phone={phone}
 						deleteBtn={deleteBtn}
 					/>
 				);

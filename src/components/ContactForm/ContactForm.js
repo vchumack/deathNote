@@ -25,7 +25,7 @@ const FormError = ({ name }) => {
 
 const schema = yup.object().shape({
 	name: yup.string().min(3).required(),
-	number: yup.string().min(5).required(),
+	phone: yup.string().min(5).required(),
 });
 
 export function ContactForm({ submitForm }) {
@@ -33,13 +33,13 @@ export function ContactForm({ submitForm }) {
 
 	const initialValues = {
 		name: '',
-		number: '',
+		phone: '',
 	};
 
-	const handleSubmit = ({ name, number }, { resetForm }) => {
+	const handleSubmit = ({ name, phone }, { resetForm }) => {
 		const newContact = {
 			name,
-			number,
+			phone,
 		};
 
 		console.log(newContact);
@@ -68,7 +68,7 @@ export function ContactForm({ submitForm }) {
 					number
 					<Input
 						type="tel"
-						name="number"
+						name="phone"
 						title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
 						required
 					/>
