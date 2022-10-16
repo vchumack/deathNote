@@ -108,3 +108,7 @@ export const Button = styled.button`
 		transform: scale(1);
 	}
 `;
+
+export const ImgBox = styled.div`
+	margin-top: 2px;
+`;

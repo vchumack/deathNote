@@ -9,6 +9,7 @@ import {
 	Input,
 	Button,
 } from './RegisterView.styled';
+import deathNote from 'img/deathNoteReg.jpg';
 
 export const RegisterView = () => {
 	const dispatch = useDispatch();
@@ -92,6 +93,9 @@ export const RegisterView = () => {
 					</label>
 					<Button type="submit">Create profile</Button>
 				</Form>
+				<div>
+					<img src={deathNote} width="900" alt="godOfGeath" />
+				</div>
 			</RegisterBox>
 		</Box>
 	);

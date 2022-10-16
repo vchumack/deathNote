@@ -9,7 +9,9 @@ import {
 	Label,
 	Input,
 	Button,
+	ImgBox,
 } from './LoginView.styled';
+import deathNote from 'img/dnlog.png';
 
 export const LoginView = () => {
 	const dispatch = useDispatch();
@@ -57,6 +59,7 @@ export const LoginView = () => {
 		>
 			<LoginBox>
 				<LoginTitle>LoginView</LoginTitle>
+
 				<Form onSubmit={handleSubmit}>
 					<Label>
 						Email
@@ -80,6 +83,10 @@ export const LoginView = () => {
 					</Label>
 					<Button type="submit">Log in</Button>
 				</Form>
+
+				<ImgBox>
+					<img src={deathNote} width="900" alt="godOfGeath" />
+				</ImgBox>
 			</LoginBox>
 		</Box>
 	);

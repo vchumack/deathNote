@@ -21,6 +21,8 @@ export const Header = styled.header`
 `;
 export const HeaderNav = styled.nav`
 	display: flex;
+	justify-content: center;
+	align-items: baseline;
 `;
 
 export const HeaderList = styled.div`
