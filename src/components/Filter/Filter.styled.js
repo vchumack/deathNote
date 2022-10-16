@@ -9,7 +9,7 @@ export const LabelFilter = styled.label`
 	/* color: #fff; */
 	text-transform: uppercase;
 
-	background-image: linear-gradient(to left, #553c9a, #ad8de0);
+	background-image: linear-gradient(to left, #9a3c3c, #e08d8d);
 	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -30,13 +30,22 @@ export const InputFilter = styled.input`
 	border: 0;
 	border-radius: 20px;
 	font-family: 'Roboto', sans-serif;
-	background: rgb(245, 229, 152);
+	/* background: rgb(245, 229, 152);
 	background: linear-gradient(
 		270deg,
 		rgba(245, 229, 152, 0.5333634918811274) 0%,
 		rgba(246, 246, 203, 0.7550520696559874) 36%,
 		rgba(255, 254, 203, 1) 75%,
 		rgba(254, 255, 216, 1) 100%
+	); */
+
+	background: rgb(245, 152, 152);
+	background: linear-gradient(
+		270deg,
+		rgba(245, 152, 152, 0.533) 0%,
+		rgba(246, 203, 203, 0.755) 36%,
+		rgb(213, 133, 133) 75%,
+		rgb(172, 124, 124) 100%
 	);
 
 	color: #553c9a;

@@ -1,41 +1,44 @@
-import { Form, Field } from 'formik';
 import styled from 'styled-components';
 
-export const ErrorText = styled.p`
-	color: #be6161;
-	text-transform: lowercase;
-	font-size: 15px;
-`;
-
-export const FormContacts = styled(Form)`
+export const LoginBox = styled.div`
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 `;
+export const LoginTitle = styled.h1`
+	font-size: 50px;
+	padding: 0;
+	margin: 0;
+	margin-top: 20px;
+	margin-bottom: 50px;
 
-export const Label = styled.label`
-	display: block;
-	margin-top: 10px;
-	padding: 5px 10px;
-	font-size: 15px;
-	font-weight: 600;
-	color: #9e0e0e;
-	text-transform: uppercase;
-
-	/* background-image: linear-gradient(
+	background-image: linear-gradient(
 		180deg,
-		rgba(105, 2, 210, 1) 0%,
-		rgba(106, 53, 156, 1) 15%,
-		rgba(181, 137, 214, 1) 55%,
-		rgba(183, 163, 203, 1) 100%
-	); */
+		rgba(255, 5, 5) 0%,
+		rgba(156, 53, 53, 1) 15%,
+		rgba(227, 136, 136, 1) 55%,
+		rgba(253, 253, 253, 1) 100%
+	);
 
-	/* color: transparent;
+	color: transparent;
 	background-clip: text;
-	-webkit-background-clip: text; */
+	-webkit-background-clip: text;
 `;
 
-export const Input = styled(Field)`
+export const Form = styled.form`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 30px;
+`;
+
+export const Label = styled.label``;
+
+export const Input = styled.input`
+	margin: 10px;
+
 	display: block;
 	width: 93%;
 	margin: auto;
@@ -52,9 +55,6 @@ export const Input = styled(Field)`
 	border-radius: 20px;
 
 	font-family: 'Roboto', sans-serif;
-	/* font-family: 'deathNote';
-	font-size: 30px;
-	font-weight: 700; */
 
 	background: rgb(245, 152, 152);
 	background: linear-gradient(
@@ -65,29 +65,25 @@ export const Input = styled(Field)`
 		rgb(172, 124, 124) 100%
 	);
 
-	color: #553c9a;
+	color: #f27b7b;
 
 	:-webkit-autofill {
 		transition: all 5000s ease-in-out 0s;
 	}
-`;
 
-export const BtnBox = styled.div`
-	display: flex;
-	justify-content: center;
-	margin-top: 10px;
+	::placeholder {
+		color: white;
+	}
 `;
 
 export const Button = styled.button`
 	margin-top: 20px;
-	width: 120px;
+	width: 150px;
 	height: 40px;
 	padding: 5px;
 	font-family: 'deathNote';
 	font-size: 20px;
 	font-weight: 700;
-	/* font-size: 14px;
-	font-weight: 700; */
 
 	opacity: 1;
 	background: #faacacfa;

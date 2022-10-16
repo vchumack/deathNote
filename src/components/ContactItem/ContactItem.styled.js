@@ -1,26 +1,26 @@
 import styled from 'styled-components';
 
 export const LiContactItem = styled.li`
-	border: 2px solid #b292d3;
-	background: #ebf3fa3f;
+	border: 2px solid #f27b7b;
+	background: transparent;
 	position: relative;
 	margin-bottom: 20px;
 	padding: 16px 10px;
-	color: #720e9e;
+	color: #9e0e0e;
 
 	:hover {
 		z-index: 1;
 	}
 
 	:before {
-		border: 2px solid #b292d3;
+		border: 2px solid #d39292;
 		position: absolute;
 		top: -14px;
 		padding: 2px 10px;
 		font-size: 11px;
 		font-weight: bold;
-		color: #b292d3;
-		background: #f7fafd;
+		color: #9e0e0e;
+		background: #e2bbbb;
 		counter-increment: li;
 		content: counter(li);
 		-webkit-transition-duration: 0.3s;
@@ -28,7 +28,7 @@ export const LiContactItem = styled.li`
 	}
 
 	:hover:before {
-		background: #b292d3;
+		background: #9e0e0e;
 		color: #fff;
 		-webkit-transform: translate(-12px, 0);
 		-ms-transform: translate(-12px, 0);
@@ -44,7 +44,8 @@ export const LiContactItem = styled.li`
 		-webkit-transition-property: width;
 		transition-property: width;
 		z-index: -1;
-		background: #e0e5ea83;
+		background: #d19c9c4a;
+
 		height: 100%;
 		left: 0;
 		top: 0;
@@ -66,7 +67,7 @@ export const BtnDelete = styled.button`
 	right: 20px;
 	width: 24px;
 	height: 24px;
-	opacity: 0.2;
+	opacity: 0.5;
 	cursor: pointer;
 	transition: opacity ease 0.5s;
 
@@ -82,7 +83,7 @@ export const BtnDelete = styled.button`
 		left: -2px;
 		width: 24px;
 		height: 3px;
-		background: #b292d3;
+		background: #f27b7b;
 		display: block;
 		/* display: ${props => {
 			if (props.onLoad) {

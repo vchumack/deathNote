@@ -1,19 +1,44 @@
 @import-normalize;
 /* bring in normalize.css styles */
 
+@font-face {
+  font-family: "deathNote";
+  src: url("./fonts/deathnote_font.ttf") format("truetype");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: rgb(236, 218, 128);
-  background: linear-gradient(270deg, rgba(236, 218, 128, 0.5333634918811274) 0%, rgba(233, 232, 167, 1) 36%, rgba(255, 254, 203, 1) 75%, rgba(215, 222, 178, 0.7126352005646008) 100%);
-  /* background-color: #720e9e */
+  -moz-osx-font-smoothing: grayscale; */
+  font-family: "deathNote" !important;
+
+  background-image: url(./img/bd3.jpg);
+  background-size: cover;
+
+  color: #ffffff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.active {
+  color: red !important;
+}
+
+.example {
+  background: #faacacfa;
+  background-image: linear-gradient(to left, #ed0606, #d39393);
+  background-image: #9e0e0e;
+  border: 2px solid #d19c9c4a;
+  background: #e14a4ab8;
+
+  background-image: linear-gradient(to left, #9a3c3c, #e08d8d);
+
+  background: #553c9a;
+  color: #f27b7b;
 }

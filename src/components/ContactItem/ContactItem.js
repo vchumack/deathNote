@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { LiContactItem, BtnDelete } from './ContactItem.styled';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+import { getContactsIsLoading } from '../../redux/contacts/contactsSelectors';
 
-export const ContactItem = ({ id, name, phone, deleteBtn }) => {
-	const isLoading = useSelector(state => state.contacts.isLoading);
+export const ContactItem = ({ id, name, number, deleteBtn }) => {
+	const isLoading = useSelector(getContactsIsLoading);
 	const [isLoadingLocal, setIsLoadingLocal] = useState(false);
 	return (
 		<LiContactItem>
-			{name}: {phone}
+			{name}: {number}
 			<BtnDelete
 				type="button"
 				// disabled={isLoading}
@@ -27,6 +28,6 @@ export const ContactItem = ({ id, name, phone, deleteBtn }) => {
 ContactItem.propTypes = {
 	id: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
-	phone: PropTypes.string.isRequired,
+	number: PropTypes.string.isRequired,
 	deleteBtn: PropTypes.func.isRequired,
 };

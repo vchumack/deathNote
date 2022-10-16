@@ -6,7 +6,7 @@ export const Filter = ({ changeInput }) => {
 	// console.log(typeof changeInput);
 	return (
 		<LabelFilter>
-			Find contacts by Name
+			Find person by Name
 			<InputFilter
 				type="text"
 				name="filter"

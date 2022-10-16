@@ -13,6 +13,7 @@ import {
 	BtnBox,
 } from './ContactForm.styled';
 import { useSelector } from 'react-redux';
+import { getContactsIsLoading } from '../../redux/contacts/contactsSelectors';
 
 const FormError = ({ name }) => {
 	return (
@@ -25,21 +26,21 @@ const FormError = ({ name }) => {
 
 const schema = yup.object().shape({
 	name: yup.string().min(3).required(),
-	phone: yup.string().min(5).required(),
+	number: yup.string().min(5).required(),
 });
 
 export function ContactForm({ submitForm }) {
-	const isLoading = useSelector(state => state.contacts.isLoading);
+	const isLoading = useSelector(getContactsIsLoading);
 
 	const initialValues = {
 		name: '',
-		phone: '',
+		number: '',
 	};
 
-	const handleSubmit = ({ name, phone }, { resetForm }) => {
+	const handleSubmit = ({ name, number }, { resetForm }) => {
 		const newContact = {
 			name,
-			phone,
+			number,
 		};
 
 		console.log(newContact);
@@ -65,10 +66,10 @@ export function ContactForm({ submitForm }) {
 					<FormError name="name" title="title" />
 				</Label>
 				<Label>
-					number
+					id
 					<Input
 						type="tel"
-						name="phone"
+						name="number"
 						title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
 						required
 					/>
@@ -76,7 +77,7 @@ export function ContactForm({ submitForm }) {
 				</Label>
 				<BtnBox>
 					<Button type="submit" disabled={isLoading}>
-						{isLoading ? '...Adding' : 'Add contact'}
+						{isLoading ? '...Adding' : 'Add person'}
 					</Button>
 				</BtnBox>
 			</FormContacts>
