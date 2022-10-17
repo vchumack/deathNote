@@ -6,6 +6,7 @@ export const LabelFilter = styled.label`
 	padding: 5px 10px;
 	font-size: 15px;
 	font-weight: 600;
+	font-family: 'Comic Sans MS', sans-serif;
 	/* color: #fff; */
 	text-transform: uppercase;
 

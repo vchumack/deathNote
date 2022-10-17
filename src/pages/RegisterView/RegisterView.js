@@ -8,6 +8,7 @@ import {
 	Form,
 	Input,
 	Button,
+	Label,
 } from './RegisterView.styled';
 import deathNote from 'img/deathNoteReg.jpg';
 
@@ -61,7 +62,7 @@ export const RegisterView = () => {
 			<RegisterBox>
 				<RegisterTitle>RegisterView</RegisterTitle>
 				<Form onSubmit={handleSubmit}>
-					<label>
+					<Label>
 						Name
 						<Input
 							type="text"
@@ -70,8 +71,8 @@ export const RegisterView = () => {
 							placeholder="Enter yout name"
 							onChange={handleChange}
 						></Input>
-					</label>
-					<label>
+					</Label>
+					<Label>
 						Email
 						<Input
 							type="mail"
@@ -80,8 +81,8 @@ export const RegisterView = () => {
 							placeholder="Enter yout email"
 							onChange={handleChange}
 						></Input>
-					</label>
-					<label>
+					</Label>
+					<Label>
 						Password
 						<Input
 							type="text"
@@ -90,7 +91,7 @@ export const RegisterView = () => {
 							placeholder="Enter yout password"
 							onChange={handleChange}
 						></Input>
-					</label>
+					</Label>
 					<Button type="submit">Create profile</Button>
 				</Form>
 				<div>

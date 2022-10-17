@@ -21,6 +21,7 @@ export const Label = styled.label`
 	font-weight: 600;
 	color: #9e0e0e;
 	text-transform: uppercase;
+	font-family: 'Comic Sans MS', sans-serif;
 
 	/* background-image: linear-gradient(
 		180deg,
@@ -51,7 +52,7 @@ export const Input = styled(Field)`
 
 	border-radius: 20px;
 
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Comic Sans MS', sans-serif;
 	/* font-family: 'deathNote';
 	font-size: 30px;
 	font-weight: 700; */
@@ -65,7 +66,7 @@ export const Input = styled(Field)`
 		rgb(172, 124, 124) 100%
 	);
 
-	color: #553c9a;
+	color: white;
 
 	:-webkit-autofill {
 		transition: all 5000s ease-in-out 0s;
@@ -80,27 +81,25 @@ export const BtnBox = styled.div`
 
 export const Button = styled.button`
 	margin-top: 20px;
-	width: 120px;
-	height: 40px;
-	padding: 5px;
+	padding-bottom: 10px;
+	width: 170px;
+	height: 50px;
+
 	font-family: 'deathNote';
-	font-size: 20px;
+	font-size: 35px;
 	font-weight: 700;
-	/* font-size: 14px;
-	font-weight: 700; */
 
 	opacity: 1;
-	background: #faacacfa;
+
 	background-image: linear-gradient(to left, #ed0606, #d39393);
 	background-image: #9e0e0e;
-	border: 2px solid #d39292;
-	background: #e14a4ab8;
 
-	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
-
+	color: transparent;
+	border: 2px solid #d39292;
 	cursor: pointer;
+
 	transition: transform 250ms linear;
 
 	:hover {

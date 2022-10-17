@@ -5,42 +5,46 @@ export const UserMenuBox = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin-left: 100px;
+
 	gap: 20px;
+	/* font-family: 'Comic Sans MS', sans-serif; */
 	/* background-color: aliceblue; */
 `;
 
 export const UserMenuText = styled.p`
-	font-size: 16px;
+	font-family: 'Comic Sans MS', sans-serif;
+	font-size: 14px;
 	/* color: #f27b7b; */
 `;
 
 export const UserMenuBtn = styled.button`
-	width: 70px;
-	height: 40px;
-	/* margin-top: 20px;
-	width: 120px;
-	height: 40px; */
-	padding: 5px;
-
-	/* font-size: 14px;
-	font-weight: 700; */
+	/* margin-top: 20px; */
+	/* padding-bottom: 10px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 35px;
+	padding-bottom: 10px;
+	padding-top: 3px;
+	padding-left: 64px;
+	padding-right: 64px;
 
 	font-family: 'deathNote';
-	font-size: 18px;
+	font-size: 28px;
 	font-weight: 700;
 
 	opacity: 1;
-	background: #faacacfa;
+
 	background-image: linear-gradient(to left, #ed0606, #d39393);
 	background-image: #9e0e0e;
-	border: 2px solid #d39292;
-	background: #e14a4ab8;
 
-	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
-
+	color: transparent;
+	border: 2px solid #d39292;
 	cursor: pointer;
+
 	transition: transform 250ms linear;
 
 	:hover {

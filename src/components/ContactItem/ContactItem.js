@@ -21,6 +21,17 @@ export const ContactItem = ({ id, name, number, deleteBtn }) => {
 			>
 				{isLoadingLocal && isLoading && '...'}
 			</BtnDelete>
+			{/* <BtnDelete
+				type="button"
+				// disabled={isLoading}
+				onClick={() => {
+					deleteBtn(id);
+					setIsLoadingLocal(true);
+				}}
+				// onLoad={() => isLoadingLocal && isLoading}
+			>
+				{isLoadingLocal && isLoading && '...'}
+			</BtnDelete> */}
 		</LiContactItem>
 	);
 };

@@ -7,7 +7,7 @@ export const RegisterBox = styled.div`
 	flex-direction: column;
 `;
 export const RegisterTitle = styled.h1`
-	font-size: 50px;
+	font-size: 60px;
 	padding: 0;
 	margin: 0;
 	margin-top: 20px;
@@ -31,17 +31,20 @@ export const Form = styled.form`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	width: 500px;
 	gap: 30px;
+`;
+export const Label = styled.label`
+	width: 100%;
+	font-family: 'Comic Sans MS', sans-serif;
 `;
 
 export const Input = styled.input`
-	margin: 10px;
-
 	display: block;
-	width: 93%;
-	margin: auto;
-	padding: 13px;
+	width: 100%;
+	margin: 0;
 	margin-top: 20px;
+	padding: 13px;
 
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
 		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -52,7 +55,7 @@ export const Input = styled.input`
 
 	border-radius: 20px;
 
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Comic Sans MS', sans-serif;
 
 	background: rgb(245, 152, 152);
 	background: linear-gradient(
@@ -63,7 +66,7 @@ export const Input = styled.input`
 		rgb(172, 124, 124) 100%
 	);
 
-	color: #f27b7b;
+	color: white;
 
 	:-webkit-autofill {
 		transition: all 5000s ease-in-out 0s;
@@ -76,26 +79,25 @@ export const Input = styled.input`
 
 export const Button = styled.button`
 	margin-top: 20px;
-	width: 70px;
-	height: 30px;
-	padding: 5px;
+	padding-bottom: 10px;
+	width: 130px;
+	height: 50px;
 
 	font-family: 'deathNote';
-	font-size: 20px;
+	font-size: 35px;
 	font-weight: 700;
 
 	opacity: 1;
-	background: #faacacfa;
+
 	background-image: linear-gradient(to left, #ed0606, #d39393);
 	background-image: #9e0e0e;
-	border: 2px solid #d39292;
-	background: #e14a4ab8;
 
-	color: transparent;
 	background-clip: text;
 	-webkit-background-clip: text;
-
+	color: transparent;
+	border: 2px solid #d39292;
 	cursor: pointer;
+
 	transition: transform 250ms linear;
 
 	:hover {

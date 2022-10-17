@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const TitlePhonebook = styled.h1`
-	font-size: 70px;
-	font-weight: 600;
 	/* background-image: linear-gradient(to left, #553c9a, #b393d3); */
 	background-image: linear-gradient(
 		180deg,
@@ -17,12 +15,12 @@ export const TitlePhonebook = styled.h1`
 	-webkit-background-clip: text;
 
 	font-family: 'deathNote';
-	font-size: 40px;
+	font-size: 50px;
 	font-weight: 700;
 `;
 
 export const SecondTitlePhonebook = styled.h2`
-	font-size: 40px;
+	font-size: 50px;
 	font-weight: 600;
 	background-image: linear-gradient(
 		180deg,

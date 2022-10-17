@@ -1,6 +1,6 @@
 import { Box } from '../../components/Box';
 import * as React from 'react';
-import { HomeBox, HomeText, HomeTitle } from './Home.styled';
+import { HomeBox, HomeText, HomeTitle, HomeTextUkr } from './Home.styled';
 import ryuk from 'img/mainHome.jpg';
 
 export const Home = () => {
@@ -25,6 +25,7 @@ export const Home = () => {
 				<HomeText>
 					Log in for a unique opportunity to complete your own Death Note
 				</HomeText>
+				<HomeTextUkr>Help Ukraine destroy all orcs</HomeTextUkr>
 				<div>
 					<img src={ryuk} width="700" alt="godOfGeath" />
 				</div>
