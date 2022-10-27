@@ -1,8 +1,8 @@
 {
-  "name": "react-homework-template",
+  "name": "deathNote",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vchumack.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://vchumack.github.io/deathNote/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.3",
