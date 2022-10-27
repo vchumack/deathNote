@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/deathNote/static/css/main.4a48fd99.css",
-    "main.js": "/deathNote/static/js/main.220e23c4.js",
+    "main.js": "/deathNote/static/js/main.8d02f5cc.js",
     "static/js/344.86088e32.chunk.js": "/deathNote/static/js/344.86088e32.chunk.js",
     "static/js/339.67c4cbaa.chunk.js": "/deathNote/static/js/339.67c4cbaa.chunk.js",
     "static/js/452.a4f7191b.chunk.js": "/deathNote/static/js/452.a4f7191b.chunk.js",
@@ -15,7 +15,7 @@
     "static/media/deathnote_font.ttf": "/deathNote/static/media/deathnote_font.1096ea0f1fdc42cad20c.ttf",
     "index.html": "/deathNote/index.html",
     "main.4a48fd99.css.map": "/deathNote/static/css/main.4a48fd99.css.map",
-    "main.220e23c4.js.map": "/deathNote/static/js/main.220e23c4.js.map",
+    "main.8d02f5cc.js.map": "/deathNote/static/js/main.8d02f5cc.js.map",
     "344.86088e32.chunk.js.map": "/deathNote/static/js/344.86088e32.chunk.js.map",
     "339.67c4cbaa.chunk.js.map": "/deathNote/static/js/339.67c4cbaa.chunk.js.map",
     "452.a4f7191b.chunk.js.map": "/deathNote/static/js/452.a4f7191b.chunk.js.map",
@@ -25,6 +25,6 @@
   },
   "entrypoints": [
     "static/css/main.4a48fd99.css",
-    "static/js/main.220e23c4.js"
+    "static/js/main.8d02f5cc.js"
   ]
 }
